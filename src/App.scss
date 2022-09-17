@@ -1,0 +1,258 @@
+$gray-1: #cccc;
+$pink-1: #fe3267;
+$green-1: #209655;
+$white : #fff;
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-s-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.c-gray-1 {
+  color: $gray-1;
+}
+
+.fw-500{
+  font-weight: 500;
+}
+
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.cur-p{
+  cursor: pointer;
+}
+
+.layout {
+  margin: 24px 48px;
+}
+
+.header {
+  @extend .d-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.virtual-cards {
+  h1 {
+    margin: 0;
+  }
+  div {
+    margin-left: 12px;
+    color: #0992cd;
+    font-size: 12px;
+  }
+}
+
+.add-card {
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.tabs-section {
+  @extend .d-flex;
+  margin-top: 48px;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+  & > div {
+    @extend .d-flex;
+    div {
+      margin: 0 12px;
+      padding-bottom: 16px;
+      &.active {
+        border-radius: 2px;
+        border-bottom: 3px solid $pink-1;
+        margin-bottom: -2px;
+      }
+    }
+  }
+}
+
+.filters {
+  @extend .d-flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 0;
+  .search-body{
+    position: relative;
+    input{
+      border: 1px solid $gray-1;
+      border-radius: 4px;
+      height: 22px;
+    }
+    .search-close{
+      position: absolute;
+      right: 5px;
+      top: 2px;
+    }
+  }
+}
+
+.custom-filter{
+
+  .filter-ic {
+    background-color: #f9f9f8;
+    color: #6c6d6c;
+    padding: 4px 12px;
+    border-radius: 5px;
+    margin-left: 18px;
+    position: relative;
+  }
+  .filter-body{
+    width: 400px;
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    background-color: $white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid $gray-1;
+    border-radius: 6px;
+    // padding: 24px;
+    .title{
+      font-size: 18px;
+      padding: 12px 8px;
+      border-bottom: 1px solid $gray-1;
+    }
+    .body{
+      padding: 18px;
+      .checbox-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .checkbox{
+          flex: 0 1 calc(50% - 10px);
+          justify-content: flex-start;
+          margin-right: 5px;
+          input{
+            width: 18px;
+            height: 18px;
+          }
+          label{
+            text-transform: capitalize;
+            margin-left: 8px;
+          }
+        }
+      }
+      .cta-wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 0;
+        button{
+          @extend .fw-500;
+          width: 47%;
+          height: 32px;
+          border: none;
+          font-size: 14px;
+          border-radius: 4px;
+          &.primary{
+            background-color: $pink-1;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cards{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(50% - 150px );
+  padding: 18px;
+  border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 20px;
+  .desciption {
+    margin-top: 10px;
+    color: #878181cc;
+    .badge {
+      border: 1px solid $gray-1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+  .icon {
+    color: $pink-1;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: $green-1;
+  height: 10px;
+  border-radius: 5px;
+  margin: 12px 0;
+  overflow: hidden;
+  .active-bar {
+    height: 100%;
+    background-color: $pink-1;
+  }
+}
+
+
+.metrics {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 8px;
+  &.spent {
+    background-color: $pink-1;
+  }
+  &.available {
+    background-color: $green-1;
+  }
+}
+
+input[type="checkbox"] {
+  accent-color: $pink-1
+}
+
+.loading{
+  color: $pink-1;
+  svg{
+    animation: load 2s linear infinite;
+  }
+}
+
+@keyframes load{
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
