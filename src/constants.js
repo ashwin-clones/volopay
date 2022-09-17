@@ -1,5 +1,5 @@
 export const YOUR_TAB = 'your';
-export const ALL_TAB = 'all';
+export const ALL_TAB = 'volopay';
 export const BLOCKED_TAB = 'blocked';
 export const API_URL = 'https://63255db94cd1a2834c3d1170.mockapi.io/api/virtualcards'
 export const BURNER_CARD_TYPE = 'burner';
